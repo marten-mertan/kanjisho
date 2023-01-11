@@ -25,6 +25,19 @@ const actions = {
         console.log('Fetched data: ', data);
         this.data[name] = data;
     },
+    async fetchDynamicData(name, index, params) {
+        const {HEADER_KEY, HEADER_HOST, BASE_URL} = useRuntimeConfig();
+        const options = {
+            headers: {
+                'X-RapidAPI-Key': HEADER_KEY,
+                'X-RapidAPI-Host': HEADER_HOST,
+            },
+            params: params,
+        };
+        const data = await $fetch(BASE_URL + this.api[name], options)
+        console.log('Fetched data: ', data);
+        this.data[name][index] = data;
+    },
 }
 
 export const useStore = defineStore('store', {

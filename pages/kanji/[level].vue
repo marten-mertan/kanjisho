@@ -5,7 +5,7 @@
         
         />
 		<KanjiCatalog 
-			:items="store.data.kanji"
+			:items="store.data['kanji'][route.params.level]"
 		/>
 	</div>
 </template>
@@ -17,7 +17,7 @@
 	const store = useStore();
 
 	await useAsyncData('kanji', () => {
-		store.fetchData('kanji', {grade: route.params.level})
+		store.fetchDynamicData('kanji', route.params.level, {grade: route.params.level})
 	});
 </script>
 
