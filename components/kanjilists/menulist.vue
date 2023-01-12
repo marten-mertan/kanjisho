@@ -9,7 +9,7 @@
                 class="kanjilist-menu-list-content-item"
             >
                 <NuxtLink class="kanjilist-menu-list-content-item__link" 
-                          :href="`/kanji/${level+startLevel-1}/`"
+                          :href="`/kanjilists/${name}-${level+startLevel-1}/`"
                 >
                     Grade level {{level+startLevel-1}}
                 </NuxtLink>
@@ -21,6 +21,10 @@
 <script setup>
     defineProps({
         title: {
+            type: String,
+            required: true,
+        },
+        name: {
             type: String,
             required: true,
         },
@@ -48,7 +52,7 @@
             display: flex;
             flex-wrap: wrap;
             padding: 1rem 0;
-
+            
             &-item {
                 padding: .4rem 0 .4rem 1.2rem;
                 font-size: 1.4rem;

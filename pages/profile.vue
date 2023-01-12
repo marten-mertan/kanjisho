@@ -1,6 +1,8 @@
 <template>
-	<div class="container">
-		Profile
+	<div class="page container">
+		<div class="content">
+			Profile
+		</div>
 	</div>
 </template>
 

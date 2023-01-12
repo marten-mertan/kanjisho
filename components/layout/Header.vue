@@ -1,6 +1,6 @@
 <template>
 	<header class="header">
-		<div class="header-wrap">
+		<div class="header-wrap container">
 			<div class="header-title">
 				<NuxtLink href="/" class="header-title__link" >Kanjisho</NuxtLink>
 			</div>
@@ -11,6 +11,9 @@
 					</li>
 					<li class="header-menu-list-item">
 						<NuxtLink href="/kanji/1/" class="header-menu-list-item__link" >Kanji</NuxtLink>
+					</li>
+					<li class="header-menu-list-item">
+						<NuxtLink href="/kanjilists/ap-1/" class="header-menu-list-item__link" >Exam Lists</NuxtLink>
 					</li>
 					<li class="header-menu-list-item">
 						<NuxtLink href="/profile/" class="header-menu-list-item__link" >Profile</NuxtLink>
@@ -35,6 +38,7 @@ export default {
   width: 100%;
   background: $white;
   border-bottom: .1rem solid $gray-light;
+  z-index: 100;
 
   &-wrap {
     display: flex;
@@ -42,7 +46,8 @@ export default {
 	justify-content: space-between;
 	flex-wrap: wrap;
     height: $header-h;
-    padding: 1.8rem 3rem;
+    padding-top: 1.8rem;
+    padding-bottom: 1.8rem;
 
     @include respond-to(mobile) {
       height: $header-h-m;

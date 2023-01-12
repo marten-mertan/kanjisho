@@ -2,10 +2,12 @@ import { defineStore } from "pinia";
 
 const state = () => ({
     api: {
-        kanji: '/api/public/search/advanced/'
+        kanji: '/api/public/search/advanced/',
+        kanjilists: '/api/public/search/advanced/',
     },
     data: {
-        kanji: [],
+        kanji: {},
+        kanjilists: {},
     },
 })
 
@@ -25,6 +27,7 @@ const actions = {
         console.log('Fetched data: ', data);
         this.data[name] = data;
     },
+
     async fetchDynamicData(name, index, params) {
         const {HEADER_KEY, HEADER_HOST, BASE_URL} = useRuntimeConfig();
         const options = {
