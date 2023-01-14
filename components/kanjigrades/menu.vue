@@ -9,7 +9,7 @@
                 class="kanjilist-menu-list-content-item"
             >
                 <NuxtLink class="kanjilist-menu-list-content-item__link" 
-                          :href="`/kanji/${level+startLevel-1}/`"
+                          :href="`/kanjigrades/${level+startLevel-1}/`"
                 >
                     Grade level {{level+startLevel-1}}
                 </NuxtLink>

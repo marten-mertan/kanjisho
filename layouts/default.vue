@@ -21,7 +21,7 @@ export default {
   flex-direction: column;
   width: 100%;
   padding-top: $header-h;
-  min-height: calc(100vh - $footer-h);
+  flex-grow: 1;
 
   @include respond-to(mobile) {
     padding-top: $header-h-m;

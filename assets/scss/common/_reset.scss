@@ -9,6 +9,7 @@
 
 
 html {
+    min-height: 100% !important;
     height: 100%;
     font-size: .52083333vw;
     overflow-x: hidden;
@@ -27,6 +28,8 @@ html {
 }
 
 body {
+    min-height: 100% !important;
+    height: 100%;
     font-family: $font-family;
     font-size: $font-size;
     color: $body-color;
@@ -112,4 +115,14 @@ h6 {
 
 address {
     font-style: normal;
+}
+
+#__nuxt, #__nuxt > div, #__nuxt > div > div {
+    height: 100%;
+}
+
+#__nuxt > div > div {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }

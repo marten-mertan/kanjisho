@@ -34,8 +34,8 @@
 	})
 
 	await useAsyncData('kanjilists', () => {
-		store.fetchDynamicData('kanjilists', optionQuery.value, {list: optionQuery.value})
 		if (!store.data?.kanjilists?.[optionQuery.value]) {
+			store.fetchDynamicData('kanjilists', optionQuery.value, {list: optionQuery.value})
 		}
 	});
 </script>

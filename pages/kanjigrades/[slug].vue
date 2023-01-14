@@ -1,8 +1,8 @@
 <template>
 	<div class="page container">
 		<div class="aside">
-			<KanjiMenu 
-				title="Kanji List Grade levels"
+			<KanjigradesMenu 
+				title="Kanji Grade levels"
 				name="ap"
 				:startLevel = 1
 				:endLevel = 6
@@ -22,14 +22,14 @@
     const route = useRoute();
 	const store = useStore();
 
-	await useAsyncData('kanji', () => {
-		if (!store.data?.kanji?.[route.params.level]) {
-			store.fetchDynamicData('kanji', route.params.level, {grade: route.params.level})
+	await useAsyncData('kanjigrades', () => {
+		if (!store.data?.kanjigrades?.[route.params.slug]) {
+			store.fetchDynamicData('kanjigrades', route.params.slug, {grade: route.params.slug})
 		}
 	});
 
 	const kanjiArray = computed(() => {
-		return store.data?.kanji?.[route.params.level] || []
+		return store.data?.kanjigrades?.[route.params.slug] || []
 	})
 </script>
 

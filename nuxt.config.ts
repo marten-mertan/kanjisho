@@ -47,7 +47,7 @@ export default defineNuxtConfig({
                 /* Favicons */
                 {
                     name: 'msapplication-TileColor',
-                    content: '#302939'
+                    content: '#e7609e'
                 },
                 {
                     name: 'theme-color',
@@ -56,12 +56,12 @@ export default defineNuxtConfig({
             ],
             link: [
                 /* Favicons */
-                {rel: 'icon', type: 'image/x-icon', href: '/mahou-no-choukou/favicons/favicon.ico'},
-                {rel: 'icon', type: 'image/png', sizes: '32x32', href: '/mahou-no-choukou/favicons/favicon-32x32.png'},
-                {rel: 'icon', type: 'image/png', sizes: '16x16', href: '/mahou-no-choukou/favicons/favicon-16x16.png'},
-                {rel: 'apple-touch-icon', sizes: '180x180', href: '/mahou-no-choukou/favicons/apple-touch-icon.png'},
-                {rel: 'manifest', href: '/mahou-no-choukou/favicons/site.webmanifest'},
-                {rel: 'mask-icon', href: '/mahou-no-choukou/favicons/safari-pinned-tab.svg', color: '#ffd8d8'},
+                {rel: 'icon', type: 'image/x-icon', href: '/kanjisho/favicons/favicon.ico'},
+                {rel: 'icon', type: 'image/png', sizes: '32x32', href: '/kanjisho/favicons/favicon-32x32.png'},
+                {rel: 'icon', type: 'image/png', sizes: '16x16', href: '/kanjisho/favicons/favicon-16x16.png'},
+                {rel: 'apple-touch-icon', sizes: '180x180', href: '/kanjisho/favicons/apple-touch-icon.png'},
+                {rel: 'manifest', href: '/kanjisho/favicons/site.webmanifest'},
+                {rel: 'mask-icon', href: '/kanjisho/favicons/safari-pinned-tab.svg', color: '#e7609e'},
             ],
         },
     },

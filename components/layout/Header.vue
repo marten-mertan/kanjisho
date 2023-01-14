@@ -10,7 +10,7 @@
 						<NuxtLink href="/" class="header-menu-list-item__link" >Home</NuxtLink>
 					</li>
 					<li class="header-menu-list-item">
-						<NuxtLink href="/kanji/1/" class="header-menu-list-item__link" >Kanji</NuxtLink>
+						<NuxtLink href="/kanjigrades/1/" class="header-menu-list-item__link" >Kanji Grades List</NuxtLink>
 					</li>
 					<li class="header-menu-list-item">
 						<NuxtLink href="/kanjilists/ap-1/" class="header-menu-list-item__link" >Exam Lists</NuxtLink>
