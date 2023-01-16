@@ -83,6 +83,14 @@ export default defineNuxtConfig({
     ],
 
     /**
+     * Подключаем плагины
+     */
+
+    plugins: [
+        {src: '~/plugins/filters'},
+    ],
+
+    /**
      * Подключаем файл с вендорными стилями и файл с общими стилями
      */
 

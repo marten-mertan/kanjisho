@@ -1,5 +1,5 @@
 <template>
-    <div v-if="srcMp4 || srcWebm" class="ui-video">
+    <div v-if="srcMp4 || srcWebm" :class="['ui-video', {'__playing': isPlaying} ]">
         <video ref="video" class="ui-video-content" muted="muted" loop :poster="srcPoster">
             <source :src="srcMp4" type="video/mp4">
             <source :src="srcWebm" type="video/webm">
@@ -59,10 +59,17 @@
         height: 30rem;
         margin-top: 2rem;
 
-        &:hover {
+        &.__playing {
             .ui-video-controls {
-                opacity: 1;
-                transform: translateY(0);
+                opacity: 0;
+                transform: translateY(.3rem);
+            }
+
+            &:hover {
+                .ui-video-controls {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
             }
         }
 
@@ -77,8 +84,8 @@
             left: 0;
             width: 100%;
             height: 100%;
-            opacity: 0;
-            transform: translateY(.3rem);
+            opacity: 1;
+            transform: translateY(0);
             transition: opacity .22s ease, transform .22s ease;
 
             &__play {

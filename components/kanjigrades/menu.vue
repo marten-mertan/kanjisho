@@ -7,6 +7,7 @@
             <li v-for="(level) in endLevel - startLevel + 1"
                 :key="`kanjilist-menu-list-content-item-${level+startLevel-1}`" 
                 class="kanjilist-menu-list-content-item"
+                :class="{'__current': route.params.slug === `${level+startLevel-1}`}"
             >
                 <NuxtLink class="kanjilist-menu-list-content-item__link" 
                           :href="`/kanjigrades/${level+startLevel-1}/`"
@@ -19,6 +20,8 @@
 </template>
 
 <script setup>
+    const route = useRoute();
+
     defineProps({
         title: {
             type: String,
@@ -53,6 +56,11 @@
                 padding: .4rem 0 .4rem 1.2rem;
                 font-size: 1.4rem;
                 width: 50%;
+
+                &.__current {
+                    pointer-events: none;
+                    color: $pink;
+                }
 
                 &__link {
                     transition: color .22s ease;
