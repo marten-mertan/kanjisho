@@ -7,6 +7,11 @@
 				:startLevel = 1
 				:endLevel = 6
 			/>
+			<UiButtonLink 
+				text="Start test"
+				ref="/test/"
+			/>
+			<p class="text">* the test contains the kanji of the selected grade level</p>
 		</div>
 		<div class="content">
 			<KanjiCatalog 

@@ -1,5 +1,6 @@
 <template>
-	<div class="page container">
+	<div v-if="!data?.kanji" class="loading"></div>
+	<div v-else class="page container">
 		<div class="aside">
 			<div class="kanji-aside-wrap">
 				<div class="kanji__image">{{ data?.kanji?.character }}</div>
@@ -9,20 +10,26 @@
 			</div>
 		</div>
 		<div class="content">
-			<div class="kanji__title">References:</div>
-			<div class="kanji__info">Grade: <span class="w-700">{{ data?.references?.grade }}</span></div>
-			<div class="kanji__info">Kodansha Dictionary: <span class="w-700">{{ data?.references?.kodansha }}</span></div>
-			<div class="kanji__info">Nelson Japanese-English Dictionary: <span class="w-700">{{ data?.references?.classic_nelson }}</span></div>
-			<div class="kanji__title">Meaning:</div>
-			<div class="kanji__info">{{ data?.kanji?.meaning?.english }}</div>
-			<div class="kanji__title">Examples:</div>
-			<div class="kanji__info" v-for="(example) in data?.examples">{{ `${$filters.crescentBrackets(example.japanese)}${example.meaning.english}` }}</div>
-			<div class="kanji__title">Video:</div>
-			<UiVideo 
-				:srcMp4="data?.kanji?.video?.mp4"
-				:srcWebm="data?.kanji?.video?.webm"
-				:srcPoster="data?.kanji?.video?.poster"
-			/>
+			<div class="content-table">
+				<div class="content-table-col">
+					<div class="kanji__title">Meaning</div>
+					<div class="kanji__info">{{ data?.kanji?.meaning?.english }}</div>
+					<div class="kanji__title">Examples</div>
+					<div class="kanji__info" v-for="(example) in data?.examples">{{ `${$filters.crescentBrackets(example.japanese)}${example.meaning.english}` }}</div>
+				</div>
+				<div class="content-table-col">
+					<div class="kanji__title">References</div>
+					<div class="kanji__info">Grade: <span class="w-700">{{ data?.references?.grade }}</span></div>
+					<div class="kanji__info">Kodansha Dictionary: <span class="w-700">{{ data?.references?.kodansha }}</span></div>
+					<div class="kanji__info">Nelson Japanese-English Dictionary: <span class="w-700">{{ data?.references?.classic_nelson }}</span></div>
+					<div class="kanji__title">Video</div>
+					<UiVideo 
+						:srcMp4="data?.kanji?.video?.mp4"
+						:srcWebm="data?.kanji?.video?.webm"
+						:srcPoster="data?.kanji?.video?.poster"
+					/>
+				</div>
+			</div>
 		</div>
 	</div>
 </template>
@@ -63,12 +70,16 @@
 
 		&__info {
 			font-size: 1.7rem;
-			margin-top: .8rem;
+			line-height: 3.1rem;
 		}
 
 		&__title {
 			font-size: 2.3rem;
+			line-height: 3.1rem;
 			font-weight: 700;
+			text-transform: uppercase;
+			letter-spacing: .3rem;
+			margin-bottom: 1.7rem;
 
 			&:not(:first-child) {
 				margin-top: 2.4rem;

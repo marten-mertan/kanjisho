@@ -3,7 +3,7 @@
     <div v-else class="kanji-catalog">
         <NuxtLink v-for="(item, index) in items"
                 :key="'kanji-catalog-item-'+index" 
-                :href="`/kanji/${item.kanji.character}`"
+                :href="`/kanji/${item.kanji.character}/`"
                 class="kanji-catalog-item">
             <span class="kanji-catalog-item__kanji">{{ item.kanji.character }}</span>
             <span class="kanji-catalog-item__strokes">strokes: {{ item.kanji.stroke }}</span>

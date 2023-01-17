@@ -5,20 +5,51 @@
 
 .page {
 	display: flex;
-	padding-top: 2.6rem;
-	padding-bottom: 2.6rem;
+	padding-top: 5rem;
+	padding-bottom: 5rem;
 }
 
 .aside {
-    padding-right: 3rem;
+    padding-right: 4.5rem;
     width: 30rem;
     flex-grow: 0;
     flex-shrink: 0;
+
+    @include respond-to(tablet) {
+        padding-right: 3rem;
+    }
 }
 
 .content {
     flex-grow: 1;
     flex-shrink: 1;
+
+    &-table {
+        display: flex;
+
+        @include respond-to(tablet) {
+            flex-direction: column;
+        }
+
+        &-col {
+            display: flex;
+            flex-direction: column;
+            width: 50%;
+
+            @include respond-to(tablet) {
+                width: 100%;
+            }
+
+            &:not(:last-child) {
+                margin-right: 3rem;
+
+                @include respond-to(tablet) {
+                    margin-right: 0;
+                    margin-bottom: 2.4rem;
+                }
+            }
+        }
+    }
 }
 
 .container {
@@ -30,7 +61,7 @@
     padding-left: $desktop-padding;
     padding-right: $desktop-padding;
 
-    @media screen and (max-width: 767px) {
+    @include respond-to(mobile) {
         padding-left: $mobile-padding;
         padding-right: $mobile-padding;
     }
@@ -95,5 +126,11 @@
 
     100% {
         transform: rotate(360deg);
+    }
+}
+
+.text {
+    &:not(:first-child) {
+        margin-top: 2rem;
     }
 }
