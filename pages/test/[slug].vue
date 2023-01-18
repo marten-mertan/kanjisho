@@ -12,26 +12,20 @@
                 <div :class="['test-variants', {'__not-answered': questions[currentQuestion].status === 'notAnswered'}]">
                     <div v-for="(variant, index) in questions[currentQuestion].variants"
                     :key="'test-variants-item-'+index" 
-                    :class="['test-variants__item', {'__correct': currentAnswer === index && questions[currentQuestion].status === 'correct'}, {'__wrong': currentAnswer === index && questions[currentQuestion].status === 'wrong'}]"
+                    :class="['test-variants__item', {'__correct': questions[currentQuestion].userAnswerIndex === index && questions[currentQuestion].status === 'correct'}, {'__wrong': questions[currentQuestion].userAnswerIndex === index && questions[currentQuestion].status === 'wrong'}]"
                     @click="selectAnswer(index)"
                     >
                         {{ variant }}
                     </div>
                 </div>
-                <button v-if="questions[currentQuestion].status !== 'notAnswered' && currentQuestion + 1 < kanjiArray.length" class="test__next" @click="currentQuestion++">Next</button>
-                
-                <div v-if="currentQuestion+1 === kanjiArray.length && questions[currentQuestion].status !== 'notAnswered'" class="test-results">
-                    <div class="test-results__title">Results</div>
-                    <div class="test-results-table">
-                        <NuxtLink v-for="(question, index) in questions"
-                            :key="'test-results-table-item-'+index" 
-                            :href="`/kanji/${question.kanji}/`"
-                            target="_blank"
-                            :class="['test-results-table-item', {'__correct': question.status === 'correct' }, {'__wrong': question.status === 'wrong' }]">
-                            {{ question.kanji }}
-                        </NuxtLink>
-                    </div>
-                </div>
+                <UiButton :show="questions[currentQuestion].status !== 'notAnswered' && currentQuestion + 1 < kanjiArray.length" 
+                          text="Next"
+                          @onClick="nextQuestion"
+                />
+                <TestResults 
+                    v-if="currentQuestion+1 === kanjiArray.length && questions[currentQuestion].status !== 'notAnswered'"
+                    :questions="questions"
+                />
             </div>
 		</div>
 	</div>
@@ -82,10 +76,10 @@
 
     const currentQuestion = ref(0);
 
-    const currentAnswer = ref(-1);
-
     const fetchQuestion = (index, kanjiList) => {
-        console.log('fetchQuestion', index, kanjiList);
+        if (questions.value[index]) {
+            return
+        }
 		if (!store.data?.kanji?.[kanjiList[index].kanji.character]) {
 			store.fetchDynamicAdditionData('kanji', kanjiList[index].kanji.character).then(data => {
                 const meanings = $filters.shuffle(data.kanji.meaning.english.split(', '));
@@ -104,8 +98,8 @@
                     'meanings': meanings,
                     'variants': variants,
                     'status': 'notAnswered',
+                    'userAnswerIndex': -1,
                 }
-                console.log(questions.value);
             })
 		} else {
             const data = store.data?.kanji?.[kanjiList[index].kanji.character];
@@ -125,23 +119,30 @@
                 'meanings': meanings,
                 'variants': variants,
                 'status': 'notAnswered',
+                'userAnswerIndex': -1,
             }
-            
-            console.log(questions.value);
         }
+    }
+
+    const nextQuestion = () => {
+        currentQuestion.value += 1;
     }
 
     if(kanjiArray.value.length) {
         fetchQuestion(0, kanjiArray.value);
+        fetchQuestion(1, kanjiArray.value);
     }
 
     watch([currentQuestion, () => kanjiArray.value], ([index, kanjiList]) => {
         console.log('asd', index, kanjiList[index].kanji.character);
         fetchQuestion(index, kanjiList);
+        if (index + 1 < kanjiList.length) {
+            fetchQuestion(index+1, kanjiList);
+        }
     })
 
     const selectAnswer = (index) => {
-        currentAnswer.value = index;
+        questions.value[currentQuestion.value].userAnswerIndex = index;
         if (questions.value[currentQuestion.value].meanings.includes(questions.value[currentQuestion.value].variants[index])) {
             questions.value[currentQuestion.value].status = 'correct'
         } else {
@@ -199,7 +200,7 @@
                 width: calc(25% - 1.2rem);
                 padding: 2rem;
                 border: 0.1rem solid $gray-light;
-                border-radius: 1.2rem;
+                border-radius: 3.4rem;
                 font-size: 1.8rem;
                 text-align: center;
                 margin: 0 .6rem .8rem;
@@ -215,55 +216,6 @@
                 &.__wrong {
                     background-color: $red;
                     color: $white;
-                }
-            }
-        }
-
-        &__next {
-            font-size: 2.6rem;
-            margin-top: 5rem;
-            transition: color .22s ease;
-            cursor: pointer;
-
-            &:hover {
-                color: $pink;
-            }
-        }
-
-        &-results {
-            &__title {
-                font-size: 2.2rem;
-                margin-top: 5rem;
-                text-align: center;
-                font-weight: 700;
-                text-transform: uppercase;
-            }
-
-            &-table {
-                display: flex;
-                flex-wrap: wrap;
-                margin-top: 2rem;
-
-                &-item {
-                    padding: 2rem;
-                    font-size: 3.2rem;
-                    margin: .4rem;
-                    border-radius: 1.2rem;
-                    color: $white;
-                    transform: scale(1, 1);
-                    transition: transform .22s ease;
-
-                    &:hover {
-                        transform: scale(1.1, 1.1);
-                    }
-
-                    &.__correct {
-                        background-color: $green;
-                    }
-
-                    &.__wrong {
-                        background-color: $red;
-                    }
                 }
             }
         }
