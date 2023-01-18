@@ -4,7 +4,7 @@
         	<KanjilistsMenu />
 			<UiButtonLink 
 				text="Start test"
-				ref="/test/"
+				:link="`/test/kanjilists-${route.params.slug}/`"
 			/>
 			<p class="text">* the test contains the kanji of the selected grade level</p>
 		</div>

@@ -56,7 +56,8 @@ const actions = {
         const data = await $fetch(BASE_URL + this.api[name] + index + '/', options)
         console.log('Fetched data: ', data);
         this.data[name][index] = data;
-    },
+        return data
+    }
 }
 
 export const useStore = defineStore('store', {
