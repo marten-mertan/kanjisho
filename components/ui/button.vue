@@ -1,5 +1,5 @@
 <template>
-    <Transition name="button-fade">
+    <Transition name="bottom-fade">
         <button v-if="show" class="ui-button" @click="onClick">
             {{ text }}
         </button>
