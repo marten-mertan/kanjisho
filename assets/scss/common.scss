@@ -134,3 +134,13 @@
         margin-top: 2rem;
     }
 }
+
+.link {
+    color: $pink;
+    opacity: 1;
+    transition: opacity .22s ease;
+
+    &:hover {
+        opacity: .7;
+    }
+}
