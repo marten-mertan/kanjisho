@@ -4,22 +4,9 @@
 			<div class="header-title">
 				<NuxtLink href="/" class="header-title__link" >Kanjisho</NuxtLink>
 			</div>
-			<nav class="header-menu">
-				<ul class="header-menu-list">
-					<li class="header-menu-list-item">
-						<NuxtLink href="/" class="header-menu-list-item__link" >Home</NuxtLink>
-					</li>
-					<li class="header-menu-list-item">
-						<NuxtLink href="/kanjigrades/1/" class="header-menu-list-item__link" >Kanji Grades List</NuxtLink>
-					</li>
-					<li class="header-menu-list-item">
-						<NuxtLink href="/kanjilists/ap-1/" class="header-menu-list-item__link" >Exam Lists</NuxtLink>
-					</li>
-					<li class="header-menu-list-item">
-						<NuxtLink href="/profile/" class="header-menu-list-item__link" >Profile</NuxtLink>
-					</li>
-				</ul>
-			</nav>
+			<HeaderMenu 
+				:items="menuItems"
+			/>
 		</div>
 	</header>
 </template>
@@ -27,6 +14,29 @@
 <script>
 export default {
 	name: 'Header',
+
+	data() {
+		return {
+			menuItems: [
+				{
+					title: 'Home',
+					link: '/',
+				},
+				{
+					title: 'Kanji Grades List',
+					link: '/kanjigrades/1/',
+				},
+				{
+					title: 'Exam Lists',
+					link: '/kanjilists/ap-1/',
+				},
+				{
+					title: 'Profile',
+					link: '/profile/',
+				},
+			]
+		};
+	},
 };
 </script>
 
@@ -44,13 +54,13 @@ export default {
     display: flex;
     align-items: center;
 	justify-content: space-between;
-	flex-wrap: wrap;
     height: $header-h;
     padding-top: 1.8rem;
     padding-bottom: 1.8rem;
 
     @include respond-to(mobile) {
-      height: $header-h-m;
+    	height: $header-h-m;
+		padding: 0 0 0 $mobile-padding;
     }
   }
 
@@ -60,29 +70,6 @@ export default {
 		font-weight: 700;
 		line-height: 1;
 		text-transform: uppercase;
-	}
-  }
-
-  &-menu {
-	margin-left: 2rem;
-
-	&-list {
-		display: flex;
-
-		&-item {
-
-			&__link {
-				font-size: 1.2rem;
-				font-weight: 600;
-				padding: 1rem;
-				text-transform: uppercase;
-				transition: color .22s ease;
-
-				&:hover {
-					color: $pink;
-				}
-			}
-		}
 	}
   }
 }
