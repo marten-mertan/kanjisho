@@ -19,7 +19,6 @@ export default defineNuxtConfig({
 
     app: {
         baseURL: '/kanjisho/',
-        buildAssetsDir: '/n/',
 
         /**
          * Метатеги, фавиконки и т.п
