@@ -4,6 +4,10 @@ import { defineNuxtConfig } from 'nuxt';
 export default defineNuxtConfig({
     ssr: false,
 
+    router: {
+      base: '/kanjisho/' // base: '/<repository>/'
+    },
+
     /**
      * переменные окружения из .env
      */
