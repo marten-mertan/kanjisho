@@ -30,10 +30,6 @@ export default {
 					title: 'Exam Lists',
 					link: '/kanjilists/ap-1/',
 				},
-				{
-					title: 'Profile',
-					link: '/profile/',
-				},
 			]
 		};
 	},
