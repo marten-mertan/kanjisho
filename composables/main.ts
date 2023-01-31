@@ -1,8 +1,10 @@
 export function useMobile() {
-    const isMobile = ref(screen.width <= 767 ? true : false);
+    let width  = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+    const isMobile = ref(width <= 767 ? true : false);
 
     function update() {
-        isMobile.value = screen.width <= 767 ? true : false;
+        width  = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+        isMobile.value = width <= 767 ? true : false;
     }
 
     onMounted(() => window.addEventListener('resize', update))

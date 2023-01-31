@@ -66,11 +66,20 @@
 
 		&__image {
 			font-size: 8rem;
+
+			@include respond-to(mobile) {
+				font-size: 12rem;
+			}
 		}
 
 		&__info {
 			font-size: 1.7rem;
 			line-height: 3.1rem;
+
+			@include respond-to(mobile) {
+				font-size: 1.6rem;
+				line-height: 1.5;
+			}
 		}
 
 		&__title {
@@ -80,6 +89,12 @@
 			text-transform: uppercase;
 			letter-spacing: .3rem;
 			margin-bottom: 1.7rem;
+
+			@include respond-to(mobile) {
+				font-size: 2rem;
+				letter-spacing: 0;
+				margin-bottom: .8rem;
+			}
 
 			&:not(:first-child) {
 				margin-top: 2.4rem;

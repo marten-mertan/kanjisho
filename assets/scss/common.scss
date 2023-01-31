@@ -7,6 +7,12 @@
 	display: flex;
 	padding-top: 5rem;
 	padding-bottom: 5rem;
+
+    @include respond-to(mobile) {
+        flex-direction: column;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
 }
 
 .aside {
@@ -17,6 +23,14 @@
 
     @include respond-to(tablet) {
         padding-right: 3rem;
+    }
+
+    @include respond-to(mobile) {
+        width: 100%;
+        padding-right: 0;
+        padding-bottom: 2.4rem;
+        margin-bottom: 2.4rem;
+        border-bottom: .1rem solid $gray-light;
     }
 }
 

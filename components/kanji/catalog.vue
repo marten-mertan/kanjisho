@@ -42,6 +42,11 @@
             cursor: pointer;
             transition: transform .22s ease, box-shadow .22s ease;
 
+            @include respond-to(mobile) {
+                width: calc(50vw - $mobile-padding);
+                height: 18rem;
+            }
+
             &:hover {
                 box-shadow: rgba(17, 12, 46, 7%) 0 2.4rem 5rem 0;
                 transform: scale(1.2, 1.2);
@@ -50,6 +55,10 @@
 
             &__kanji {
                 font-size: 3rem;
+
+                @include respond-to(mobile) {
+                    font-size: 6.3rem;
+                }
             }
 
             &__strokes {

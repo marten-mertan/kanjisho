@@ -59,6 +59,12 @@
         height: 30rem;
         margin-top: 2rem;
 
+        @include respond-to(mobile) {
+            margin: 0 auto;
+            width: 28.8rem;
+            height: 28.8rem;
+        }
+
         &.__playing {
             .ui-video-controls {
                 opacity: 0;

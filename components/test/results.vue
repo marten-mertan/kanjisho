@@ -59,11 +59,16 @@
 <style lang="scss" scoped>
 .results {
     width: 100%;
+
     &__title {
         font-size: 2.2rem;
         text-align: center;
         font-weight: 700;
         text-transform: uppercase;
+
+        @include respond-to(mobile) {
+            font-size: 2rem;
+        }
     }
 
     &-table {
@@ -109,6 +114,10 @@
         width: 10%;
         padding: 1.2rem 1.2rem 1.2rem 3rem;
 
+        @include respond-to(mobile) {
+            width: 24%;
+        }
+
         &__link {
             font-size: 2rem;
             transition: color .22s ease;
@@ -122,6 +131,10 @@
     &-user-answer {
         width: 45%;
         padding: 1.2rem;
+
+        @include respond-to(mobile) {
+            width: 38%;
+        }
     }
 
     &-answers {

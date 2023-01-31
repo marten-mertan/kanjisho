@@ -66,7 +66,11 @@
     });
 
     const kanjiArray = computed(() => {
-        return store.data?.[optionIndex.value]?.[optionQuery.value] || []
+        if (!store.data?.[optionIndex.value]?.[optionQuery.value]) {
+            return []
+        }
+        console.log('shuffle');
+        return $filters.shuffle(store.data?.[optionIndex.value]?.[optionQuery.value])
     })
 
     const questions = ref([]);

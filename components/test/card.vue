@@ -69,12 +69,23 @@
         margin-top: 5rem;
         border: 0.1rem solid $gray-light;
         border-radius: 1.2rem;
+
+        @include respond-to(mobile) {
+            width: 100%;
+            font-size: 12rem;
+            padding: 2rem;
+            margin-top: 2rem;
+        }
     }
 
     &-variants {
         display: flex;
         flex-wrap: wrap;
         margin-top: 5rem;
+
+        @include respond-to(mobile) {
+            margin-top: 2rem;
+        }
 
         &.__not-answered {
             .test-card-variants__item {
@@ -102,6 +113,12 @@
             background-color: $white;
             pointer-events: none;
             transition: background-color .22s ease, color .22s ease;
+
+            @include respond-to(mobile) {
+                width: calc(50% - 1.2rem);
+                padding: 1.4rem 1.2rem;
+                font-size: 1.6rem;
+            }
 
             &.__correct {
                 background-color: $green;

@@ -61,6 +61,10 @@
                 font-size: 1.4rem;
                 width: 50%;
 
+                @include respond-to(mobile) {
+                    width: 13rem;
+                }
+
                 &.__current {
                     pointer-events: none;
                     color: $pink;
