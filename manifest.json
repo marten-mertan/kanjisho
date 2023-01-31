@@ -1,6 +1,6 @@
 {
   "node_modules/nuxt/dist/app/entry.mjs": {
-    "file": "n/entry.8830fe1d.mjs",
+    "file": "kanjisho/n/entry.06c95206.mjs",
     "src": "node_modules/nuxt/dist/app/entry.mjs",
     "isEntry": true,
     "dynamicImports": [
@@ -16,11 +16,11 @@
       "layouts/error.vue"
     ],
     "css": [
-      "n/entry.741aba6f.css"
+      "kanjisho/n/entry.741aba6f.css"
     ]
   },
   "virtual:nuxt:C:/Users/user/Desktop/Проекты/kanjisho/.nuxt/error-component.mjs": {
-    "file": "n/error-component.3650a754.mjs",
+    "file": "kanjisho/n/error-component.9ffe3ba1.mjs",
     "src": "virtual:nuxt:C:/Users/user/Desktop/Проекты/kanjisho/.nuxt/error-component.mjs",
     "isDynamicEntry": true,
     "imports": [
@@ -32,62 +32,62 @@
     ]
   },
   "pages/index.vue": {
-    "file": "n/index.135d15a2.mjs",
+    "file": "kanjisho/n/index.010741c2.mjs",
     "src": "pages/index.vue",
     "isDynamicEntry": true,
     "imports": [
       "node_modules/nuxt/dist/app/entry.mjs"
     ],
     "css": [
-      "n/index.16a57071.css"
+      "kanjisho/n/index.6d3fe25f.css"
     ]
   },
   "pages/kanji/[slug].vue": {
-    "file": "n/_slug_.95bc0e97.mjs",
+    "file": "kanjisho/n/_slug_.53758bde.mjs",
     "src": "pages/kanji/[slug].vue",
     "isDynamicEntry": true,
     "imports": [
       "node_modules/nuxt/dist/app/entry.mjs",
-      "_asyncData.f4702a9b.mjs"
+      "_asyncData.562b4b13.mjs"
     ],
     "css": [
-      "n/[slug].97d54ff1.css"
+      "kanjisho/n/[slug].97d54ff1.css"
     ]
   },
-  "_asyncData.f4702a9b.mjs": {
-    "file": "n/asyncData.f4702a9b.mjs",
+  "_asyncData.562b4b13.mjs": {
+    "file": "kanjisho/n/asyncData.562b4b13.mjs",
     "imports": [
       "node_modules/nuxt/dist/app/entry.mjs"
     ]
   },
   "pages/kanjigrades/[slug].vue": {
-    "file": "n/_slug_.aa0a846d.mjs",
+    "file": "kanjisho/n/_slug_.718056cc.mjs",
     "src": "pages/kanjigrades/[slug].vue",
     "isDynamicEntry": true,
     "imports": [
       "node_modules/nuxt/dist/app/entry.mjs",
-      "_catalog.2c6d3374.mjs",
-      "_asyncData.f4702a9b.mjs"
+      "_catalog.b2dd81e1.mjs",
+      "_asyncData.562b4b13.mjs"
     ]
   },
-  "_catalog.2c6d3374.mjs": {
-    "file": "n/catalog.2c6d3374.mjs",
+  "_catalog.b2dd81e1.mjs": {
+    "file": "kanjisho/n/catalog.b2dd81e1.mjs",
     "imports": [
       "node_modules/nuxt/dist/app/entry.mjs"
     ]
   },
   "pages/kanjilists/[slug].vue": {
-    "file": "n/_slug_.f94dfc4e.mjs",
+    "file": "kanjisho/n/_slug_.dbf308dd.mjs",
     "src": "pages/kanjilists/[slug].vue",
     "isDynamicEntry": true,
     "imports": [
       "node_modules/nuxt/dist/app/entry.mjs",
-      "_catalog.2c6d3374.mjs",
-      "_asyncData.f4702a9b.mjs"
+      "_catalog.b2dd81e1.mjs",
+      "_asyncData.562b4b13.mjs"
     ]
   },
   "pages/profile.vue": {
-    "file": "n/profile.84e0a2c9.mjs",
+    "file": "kanjisho/n/profile.fb4929c9.mjs",
     "src": "pages/profile.vue",
     "isDynamicEntry": true,
     "imports": [
@@ -95,33 +95,33 @@
     ]
   },
   "pages/test/[slug].vue": {
-    "file": "n/_slug_.343b2c6f.mjs",
+    "file": "kanjisho/n/_slug_.cada169f.mjs",
     "src": "pages/test/[slug].vue",
     "isDynamicEntry": true,
     "imports": [
       "node_modules/nuxt/dist/app/entry.mjs",
-      "_asyncData.f4702a9b.mjs"
+      "_asyncData.562b4b13.mjs"
     ],
     "dynamicImports": [
       "assets/json/words.json"
     ],
     "css": [
-      "n/[slug].5021c63e.css"
+      "kanjisho/n/[slug].5021c63e.css"
     ]
   },
   "layouts/default.vue": {
-    "file": "n/default.9189e013.mjs",
+    "file": "kanjisho/n/default.56e501fa.mjs",
     "src": "layouts/default.vue",
     "isDynamicEntry": true,
     "imports": [
       "node_modules/nuxt/dist/app/entry.mjs"
     ],
     "css": [
-      "n/default.adb2d9df.css"
+      "kanjisho/n/default.adb2d9df.css"
     ]
   },
   "layouts/error.vue": {
-    "file": "n/error.a5ad766c.mjs",
+    "file": "kanjisho/n/error.abf9d7d4.mjs",
     "src": "layouts/error.vue",
     "isDynamicEntry": true,
     "imports": [
@@ -129,58 +129,58 @@
     ]
   },
   "assets/json/words.json": {
-    "file": "n/words.4f9af23e.mjs",
+    "file": "kanjisho/n/words.80af15a1.mjs",
     "src": "assets/json/words.json",
     "isDynamicEntry": true
   },
   "node_modules/@nuxt/ui-templates/dist/templates/error-404.vue": {
-    "file": "n/error-404.df75928b.mjs",
+    "file": "kanjisho/n/error-404.5c602f86.mjs",
     "src": "node_modules/@nuxt/ui-templates/dist/templates/error-404.vue",
     "isDynamicEntry": true,
     "imports": [
       "node_modules/nuxt/dist/app/entry.mjs"
     ],
     "css": [
-      "n/error-404.7729cee9.css"
+      "kanjisho/n/error-404.7729cee9.css"
     ]
   },
   "node_modules/@nuxt/ui-templates/dist/templates/error-500.vue": {
-    "file": "n/error-500.0c1a8fa9.mjs",
+    "file": "kanjisho/n/error-500.90fbc269.mjs",
     "src": "node_modules/@nuxt/ui-templates/dist/templates/error-500.vue",
     "isDynamicEntry": true,
     "imports": [
       "node_modules/nuxt/dist/app/entry.mjs"
     ],
     "css": [
-      "n/error-500.08851880.css"
+      "kanjisho/n/error-500.08851880.css"
     ]
   },
   "pages/kanji/[slug].css": {
-    "file": "n/[slug].97d54ff1.css",
+    "file": "kanjisho/n/[slug].97d54ff1.css",
     "src": "pages/kanji/[slug].css"
   },
   "pages/test/[slug].css": {
-    "file": "n/[slug].5021c63e.css",
+    "file": "kanjisho/n/[slug].5021c63e.css",
     "src": "pages/test/[slug].css"
   },
   "layouts/default.css": {
-    "file": "n/default.adb2d9df.css",
+    "file": "kanjisho/n/default.adb2d9df.css",
     "src": "layouts/default.css"
   },
   "pages/index.css": {
-    "file": "n/index.16a57071.css",
+    "file": "kanjisho/n/index.6d3fe25f.css",
     "src": "pages/index.css"
   },
   "node_modules/@nuxt/ui-templates/dist/templates/error-500.css": {
-    "file": "n/error-500.08851880.css",
+    "file": "kanjisho/n/error-500.08851880.css",
     "src": "node_modules/@nuxt/ui-templates/dist/templates/error-500.css"
   },
   "node_modules/@nuxt/ui-templates/dist/templates/error-404.css": {
-    "file": "n/error-404.7729cee9.css",
+    "file": "kanjisho/n/error-404.7729cee9.css",
     "src": "node_modules/@nuxt/ui-templates/dist/templates/error-404.css"
   },
   "node_modules/nuxt/dist/app/entry.css": {
-    "file": "n/entry.741aba6f.css",
+    "file": "kanjisho/n/entry.741aba6f.css",
     "src": "node_modules/nuxt/dist/app/entry.css"
   }
 }
