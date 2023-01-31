@@ -5,9 +5,11 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "deploy": "git subtree push --prefix dist origin gh-pages "
+    "gh-pages-deploy": "gh-pages --dotfiles --dist dist",
+    "ghGenerateAndDeploy": "node deploy/ghPagesDeploy.mjs"
   },
   "devDependencies": {
+    "gh-pages": "^4.0.0",
     "nuxt": "3.0.0-rc.7",
     "sass": "^1.53.0",
     "sass-loader": "^13.0.2"
