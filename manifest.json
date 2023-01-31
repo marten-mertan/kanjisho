@@ -159,10 +159,6 @@
     "file": "_nuxt/[slug].97d54ff1.css",
     "src": "pages/kanji/[slug].css"
   },
-  "pages/test/[slug].css": {
-    "file": "_nuxt/[slug].5021c63e.css",
-    "src": "pages/test/[slug].css"
-  },
   "layouts/default.css": {
     "file": "_nuxt/default.adb2d9df.css",
     "src": "layouts/default.css"
@@ -170,6 +166,10 @@
   "pages/index.css": {
     "file": "_nuxt/index.16a57071.css",
     "src": "pages/index.css"
+  },
+  "pages/test/[slug].css": {
+    "file": "_nuxt/[slug].5021c63e.css",
+    "src": "pages/test/[slug].css"
   },
   "node_modules/@nuxt/ui-templates/dist/templates/error-500.css": {
     "file": "_nuxt/error-500.08851880.css",
