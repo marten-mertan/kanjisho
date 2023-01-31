@@ -5,12 +5,11 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "deploy": "gh-pages -d --dotfiles dist",
-    "ghGenerateAndDeploy": "node deploy/ghPagesDeploy.mjs"
+    "deploy": "gh-pages --dotfiles -d dist"
   },
   "devDependencies": {
     "gh-pages": "^4.0.0",
-    "nuxt": "3.0.0-rc.7",
+    "nuxt": "3.0.0-rc.12",
     "sass": "^1.53.0",
     "sass-loader": "^13.0.2"
   },
