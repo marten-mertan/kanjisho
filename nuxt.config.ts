@@ -42,60 +42,17 @@ export default defineNuxtConfig({
                     content: 'width=device-width, initial-scale=1',
                 },
                 {
-                    hid: 'description',
+                    name: 'title',
+                    content: 'Kanjisho',
+                },
+                {
                     name: 'description',
                     content: 'Kanjisho description',
                 },
-                /* Test Meta */
                 {
-                    property: 'og:site_name',
-                    content: 'levelgroup.idacloud.ru',
+                    name: 'author',
+                    content: 'Mertan',
                 },
-                {
-                    property: 'og:title',
-                    content: 'Level Group - лидер московского девелопмента',
-                },
-                {
-                    property: 'og:description',
-                    content: 'Продажа жилой и коммерческой недвижимости от застройщика Level Group в Москве.',
-                },
-                {
-                    property: 'og:image',
-                    content: 'https://levelgroup.idacloud.ru/static/images/og-logo.jpg',
-                },
-                {
-                    property: 'og:image:alt',
-                    content: 'Level Group',
-                },
-                {
-                    property: 'og:image:width',
-                    content: '1200',
-                },
-                {
-                    property: 'og:image:height',
-                    content: '630',
-                },
-
-                {
-                    property: 'twitter:image',
-                    content: 'https://levelgroup.idacloud.ru/static/images/og-logo.jpg',
-                },
-                {
-                    name: 'twitter:card',
-                    content: 'summary_large_image',
-                },
-
-                {
-                    property: 'vk:image',
-                    content: 'https://levelgroup.idacloud.ru/static/images/vk-logo.jpg',
-                },
-
-                {
-                    property: 'og:type',
-                    content: 'website',
-                },
-
-
                 /* Favicons */
                 {
                     name: 'msapplication-TileColor',
