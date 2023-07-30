@@ -23,7 +23,7 @@
 				</div>
 				<div class="intro-content">
 					<div class="intro__title">
-						Сontacts and links
+						Links and contacts
 					</div>
 					<div class="intro__text">
 						<p>All illustrations are created by <a class="link" href="https://twitter.com/Kukie_nyan" target="_blank">@Kukie_nyan</a></p>
