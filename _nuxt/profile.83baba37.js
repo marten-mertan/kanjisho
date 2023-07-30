@@ -1,0 +1,1 @@
+import{a as e,o,b as s,f as t}from"./entry.f9d8c4ae.js";const c={},n={class:"page container"},a=t("div",{class:"content"}," Profile ",-1),r=[a];function _(i,d){return o(),s("div",n,r)}const l=e(c,[["render",_]]);export{l as default};
