@@ -20,6 +20,18 @@
 <link href="/static/css/bundle~649039d6.6ed90ad5f53407c86711.css" rel="preload" as="style" />
 <link href="/static/css/bundle~2a0eb476.9494a278da9f4addc1a0.css" rel="preload" as="style" />
     
+    <link rel="preload" as="script" href="/static/js/bundle~493df0b3-65e489904b7669e6711c.js" />
+<link rel="preload" as="script" href="/static/js/bundle~9722bd1d-65e489904b7669e6711c.js" />
+<link rel="preload" as="script" href="/static/js/bundle~2cbb810a-65e489904b7669e6711c.js" />
+<link rel="preload" as="script" href="/static/js/bundle~c065faaf-65e489904b7669e6711c.js" />
+<link rel="preload" as="script" href="/static/js/bundle~47dad47d-65e489904b7669e6711c.js" />
+<link rel="preload" as="script" href="/static/js/bundle~3974bba3-65e489904b7669e6711c.js" />
+<link rel="preload" as="script" href="/static/js/bundle~041b8ad5-65e489904b7669e6711c.js" />
+<link rel="preload" as="script" href="/static/js/bundle~d22b2c9c-65e489904b7669e6711c.js" />
+<link rel="preload" as="script" href="/static/js/bundle~0dd8155b-65e489904b7669e6711c.js" />
+<link rel="preload" as="script" href="/static/js/bundle~649039d6-65e489904b7669e6711c.js" />
+<link rel="preload" as="script" href="/static/js/bundle~2a0eb476-65e489904b7669e6711c.js" />
+<link rel="preload" as="script" href="/static/js/bundle~d0ae3f07-65e489904b7669e6711c.js" />
     <link href="/static/css/bundle~493df0b3.4d851155958afa278173.css" rel="stylesheet" />
 <link href="/static/css/bundle~041b8ad5.d1edc0e4b95b65091ae8.css" rel="stylesheet" />
 <link href="/static/css/bundle~d22b2c9c.1e2022213908b5709a8a.css" rel="stylesheet" />
@@ -46,6 +58,187 @@
 
 
 
+    
+        <!-- Mindbox -->
+<script async>
+    mindbox = window.mindbox || function () {mindbox.queue.push(arguments);};
+    mindbox.queue = mindbox.queue || [];
+    mindbox('create', {firebaseMessagingSenderId: '909502370823'});
+    mindbox("webpush.create");
+</script>
+<script src="https://api.mindbox.ru/scripts/v1/tracker.js" async></script>
+<script async>
+    setTimeout(
+        function () {
+            mindbox(
+                "webpush.subscribe", {
+                    getSubscriptionOperation: "GetWebPushSubscription",
+                    subscribeOperation: "SubscribeToWebpush",
+                    onGranted: function () {
+                    },
+                    onDenied: function () {
+                    }
+                }
+            );
+        },
+        5000
+    );
+</script>
+<!-- End Mindbox -->
+
+<!-- Google Tag Manager -->
+<script>
+    if (!document.location.search.includes('nometrics=true')) {
+        (function (w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src =
+                'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-NXF3KGZ');
+    }
+</script>
+<!-- END Google Tag Manager -->
+
+<!-- SmartCallBack -->
+<script type="text/javascript" async src="//smartcallback.ru/api/SmartCallBack.js?t=gOMzoipnDRy30FsHJjTv" charset="utf-8"></script>
+<!-- END SmartCallBack -->
+
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript" async >
+   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+   m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+   ym(53197618, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true,
+        webvisor:true
+   });
+</script>
+
+<!-- /Yandex.Metrika counter for vacancy -->
+<script type="text/javascript" >
+    if (window.location.href.includes('vacancy')) {
+        (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+        (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+        ym(94113432, "init", {
+            clickmap: true,
+            trackLinks: true,
+            accurateTrackBounce: true
+        });
+    }
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/94113432" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+
+<!-- Pixel VK -->
+<script type="text/javascript" async>
+    !function(){
+        var t=document.createElement("script");
+        t.type="text/javascript", t.async=!0, t.src='https://vk.com/js/api/openapi.js?169', t.onload=function(){
+            VK.Retargeting.Init("VK-RTRG-1727776-2NuQF"), VK.Retargeting.Hit()
+        }, document.head.appendChild(t)}();
+</script>
+
+<!-- End Pixel VK -->
+
+<!-- Top.Mail.Ru counter -->
+<script type="text/javascript">
+    var _tmr = window._tmr || (window._tmr = []);
+    _tmr.push({id: "3284850", type: "pageView", start: (new Date()).getTime()});
+    (function (d, w, id) {
+        if (d.getElementById(id)) return;
+        var ts = d.createElement("script"); ts.type = "text/javascript"; ts.async = true; ts.id = id;
+        ts.src = "https://top-fwz1.mail.ru/js/code.js";
+        var f = function () {var s = d.getElementsByTagName("script")[0]; s.parentNode.insertBefore(ts, s);};
+        if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); }
+    })(document, window, "tmr-code");
+</script>
+<noscript><div><img src="https://top-fwz1.mail.ru/counter?id=3284850;js=na" style="position:absolute;left:-9999px;" alt="Top.Mail.Ru" /></div></noscript>
+
+<script type="text/javascript">
+    var _tmr = window._tmr || (window._tmr = []);
+    _tmr.push({id: "3350703", type: "pageView", start: (new Date()).getTime()});
+    (function (d, w, id) {
+        if (d.getElementById(id)) return;
+        var ts = d.createElement("script"); ts.type = "text/javascript"; ts.async = true; ts.id = id;
+        ts.src = "https://top-fwz1.mail.ru/js/code.js";
+        var f = function () {var s = d.getElementsByTagName("script")[0]; s.parentNode.insertBefore(ts, s);};
+        if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); }
+    })(document, window, "tmr-code");
+</script>
+<noscript><div><img src="https://top-fwz1.mail.ru/counter?id=3350703;js=na" style="position:absolute;left:-9999px;" alt="Top.Mail.Ru" /></div></noscript>
+
+<script type="text/javascript" async>
+
+    var _tmr = window._tmr || (window._tmr = []);
+
+    _tmr.push({id: "3291815", type: "pageView", start: (new Date()).getTime()});
+
+    (function (d, w, id) {
+
+      if (d.getElementById(id)) return;
+
+      var ts = d.createElement("script"); ts.type = "text/javascript"; ts.async = true; ts.id = id;
+
+      ts.src = "https://top-fwz1.mail.ru/js/code.js";
+
+      var f = function () {var s = d.getElementsByTagName("script")[0]; s.parentNode.insertBefore(ts, s);};
+
+      if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); }
+
+    })(document, window, "tmr-code");
+
+</script>
+<noscript><div><img src="https://top-fwz1.mail.ru/counter?id=3291815;js=na" style="position:absolute;left:-9999px;" alt="Top.Mail.Ru" /></div></noscript>
+<!-- /Top.Mail.Ru counter -->
+
+<!--  AdRiver lib -->
+<script src="https://content.adriver.ru/AdRiverFPS.js" async></script>
+
+<!-- Getintent -->
+
+
+<!-- VK Pixel -->
+<!-- End VK Pixel -->
+
+<!-- Carrot quest BEGIN -->
+ <script type="text/javascript" async>
+    !function(){function t(t,e){return function(){window.carrotquestasync.push(t,arguments)}}if("undefined"==typeof carrotquest){var e=document.createElement("script");e.type="text/javascript",e.async=!0,e.src="https://cdn.carrotquest.app/api.min.js",document.getElementsByTagName("head")[0].appendChild(e),window.carrotquest={},window.carrotquestasync=[],carrotquest.settings={};for(var n=["connect","track","identify","auth","onReady","addCallback","removeCallback","trackMessageInteraction"],a=0;a<n.length;a++)carrotquest[n[a]]=t(n[a])}}(),carrotquest.connect("50549-b9906febe2aaab4d349cf1594e");
+</script>
+<!-- Carrot quest END -->
+
+<!-- Yandex Webmaster -->
+<meta name="yandex-verification" content="f1a045ac9fffaedc" />
+<!-- End Yandex Webmaster -->
+
+<!-- Google Search Console -->
+<meta name="google-site-verification" content="pq3DdkgCCMBhXfciDVNXTJMlsxNAvY4nnBJUcXrg_RY" />
+<!-- End Google Search Console -->
+
+
+
+
+
+<!-- Постмастер Postmaster-->
+<meta name="mailru-verification" content="5e295ec799177660" />
+<!-- End Постмастер -->
+
+<!-- SmartCallBack BEGIN -->
+<script type="text/javascript" async src="//smartcallback.ru/api/SmartCallBack.js?t=gOMzoipnDRy30FsHJjTv" charset="utf-8"></script>
+<!-- SmartCallBack END -->
+
+
 
     
 
@@ -70,6 +263,13 @@
             
         
     </title>
+
+    
+    <link href="/static/css/index-new~748942c6.6bd68fbab665e4f30432.css" rel="stylesheet" />
+<link href="/static/css/index-new~d0511aaa.6ce1576fb783a1b4ee4c.css" rel="stylesheet" />
+<link href="/static/css/index-new~5b4423c6.e647f681c93f3272946c.css" rel="stylesheet" />
+<link href="/static/css/index-new~e0ea8c4c.38f729993f400d9ba904.css" rel="stylesheet" />
+<link href="/static/css/index-new~066b467c.c603482df3db43d85e58.css" rel="stylesheet" />
 
 
     <link rel="modulepreload" as="script" crossorigin href="/kanjisho/_nuxt/entry.be09776e.js"><link rel="preload" as="style" href="/kanjisho/_nuxt/entry.741aba6f.css"><link rel="prefetch" as="script" crossorigin href="/kanjisho/_nuxt/words.c5e84632.js"><link rel="prefetch" as="script" crossorigin href="/kanjisho/_nuxt/error-component.15f0ac4d.js"><link rel="prefetch" as="script" crossorigin href="/kanjisho/_nuxt/default.49197414.js"><link rel="prefetch" as="style" href="/kanjisho/_nuxt/default.fef84a59.css"><link rel="prefetch" as="script" crossorigin href="/kanjisho/_nuxt/error.6749a1d3.js"><link rel="stylesheet" href="/kanjisho/_nuxt/entry.741aba6f.css"></head>
